@@ -1,0 +1,39 @@
+========================================================================
+ TABLO ADI : ZMDPUTS_BILD_LOG
+ AMAC      : UTS demo - yapilan bildirimlerin audit log'u
+ KURULUM   : SE11 -> Transparent Table -> Create
+========================================================================
+
+ Kisa metin: UTS Demo - Bildirim Log Tablosu
+ Teslim sinifi: A
+ Tablo bakim izni: Display/Maintenance Allowed
+
+ ALANLAR
+ --------------------------------------------------------------------
+ Field         Key  Data Element   Type      Length  Short description
+ --------------------------------------------------------------------
+ MANDT         X    MANDT          CLNT      3       Client
+ LOG_ID        X    NUMC20         NUMC      20      Log sira numarasi
+ BILDIRIM_TIP       CHAR30         CHAR      30      Bildirim tipi (URETIM/ITHALAT/VERME/...)
+ REF_NO             CHAR20         CHAR      20      UTS referans numarasi (mock)
+ UNO                CHAR23         CHAR      23      Urun numarasi
+ LNO                CHAR20         CHAR      20      Lot numarasi
+ SNO                CHAR20         CHAR      20      Seri numarasi
+ ADT                INT4           INT4      10      Adet
+ BNO                CHAR50         CHAR      50      Belge numarasi
+ KUN                NUMC10         NUMC      10      Kurum numarasi (verilen)
+ EK_BILGI           CHAR255        CHAR      255     Ek bilgi / serbest text
+ DURUM              CHAR1          CHAR      1       S=Basarili, H=Hata
+ ERSDA              DATS           DATS      8       Kayit tarihi
+ ERZET              UZEIT          TIMS      6       Kayit saati
+ ERNAM              USNAM          CHAR      12      Kullanici
+
+ TEKNIK AYARLAR
+ --------------------------------------------------------------------
+ Data class   : APPL1
+ Size category: 1
+
+ NUMBER RANGE
+ --------------------------------------------------------------------
+ LOG_ID icin number range: SNRO -> ZMDPUTS_LOGID
+ Intervals: 01  00000000000000000001 .. 99999999999999999999

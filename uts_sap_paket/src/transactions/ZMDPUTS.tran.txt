@@ -1,0 +1,53 @@
+========================================================================
+ TRANSACTION CODE : ZMDPUTS
+ KURULUM          : SE93 -> Transaction Code -> Create
+========================================================================
+
+Transaction Code     : ZMDPUTS
+Short Text           : UTS Demo Cockpit (MDP Group)
+Start object         : Report Transaction
+
+---- REPORT TRANSACTION DETAILS ----
+Program              : ZMDPUTS_COCKPIT
+Screen Number        : 1000 (default - program'in INITIAL screen'i)
+Authorization Object : (bos birakin - demo icin)
+
+CLASSIFICATION SECTION (Attributes)
+-----------------------------------
+[X] Inherit GUI attributes
+[ ] SAP GUI for HTML
+[X] SAP GUI for Windows
+[X] SAP GUI for Java
+
+GUI Support
+-----------
+[X] SAP GUI for HTML
+[X] SAP GUI for Windows
+[X] SAP GUI for Java
+
+KAYIT SONRASI
+-------------
+Save -> Local object veya uygun package'i secin (ZPCK_ZMDPUTS onerilir)
+
+
+========================================================================
+ KULLANIM
+========================================================================
+
+1) SAP Easy Access veya komut kutusuna "ZMDPUTS" yazin -> Enter
+2) Ana cockpit ALV ekrani acilir - 18 UTS islemi listelenir
+3) Istenen islemin uzerine CIFT TIKLAYIN
+4) Acilan selection screen'de alanlari doldurup F8 (Execute) basin
+5) Bildirim basarili ise referans numarasi popup olarak cikar
+6) Sonuc ekranindan ESC ile ana cockpit'e donulur
+
+
+========================================================================
+ BONUS - MAIN MENU'DE YAYINLAMA (ISTEGE BAGLI)
+========================================================================
+
+Eger transaction'a SAP Easy Access menusunden de erisim istiyorsaniz:
+
+SE80 -> Area Menu -> S000 (veya ZMDPUTS_MENU kendi area menu'nuzde)
+veya
+SFW5 ile yeni bir switchable menu olusturun.
